@@ -1,8 +1,7 @@
 import { useLocation } from "react-router-dom";
 import Logo from "../../components/Logo";
-
 import * as S from './style';
-import { Notepad, Tag } from "@phosphor-icons/react";
+import { Notepad, SignOut, Tag } from "@phosphor-icons/react";
 import SubMenu from "./SubMenu";
 
 const menuOptions = [
@@ -42,9 +41,7 @@ export default function Menu() {
                         {option.name}
                         <Icon size={18} color="#a855f7"/>
                       </S.LinkStyled>
-                      {
-                        (active && option.subMenu) && option.subMenu
-                      }
+                      { (active && option.subMenu) && option.subMenu }
                     </li>
                   )
                 })
@@ -52,9 +49,10 @@ export default function Menu() {
             </S.MenuOptions>
           </nav>
         </div>
-        <div>
+        <S.ButtonLogout>
           Sair
-        </div>
+          <SignOut size={18} color="#a855f7"/>
+        </S.ButtonLogout>
       </S.MenuContainer>
     </aside>
   )

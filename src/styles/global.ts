@@ -33,6 +33,12 @@ const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
+
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
 `;
 
 export default GlobalStyle;

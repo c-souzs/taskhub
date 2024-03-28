@@ -37,12 +37,10 @@ export const LinkStyled = styled(Link)`
   }
 `
 
-
 export const MenuOptions = styled.ul`
   display: flex;
   flex-direction: column;
   gap: 24px;
-
   
   li {
     border-radius: 4px;
@@ -57,8 +55,31 @@ export const MenuOptions = styled.ul`
   li.active {
     background-color: var(--color-bg-medium);
 
-    a {
+    > a {
       color: var(--color-primary-dark);
+    }
+  }
+`
+
+export const ButtonLogout = styled.button`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  margin-bottom: 16px;
+
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+
+  &:hover, &:focus {
+    color: var(--color-primary-dark);
+
+    svg {
+      fill: var(--color-primary-dark);
     }
   }
 `
